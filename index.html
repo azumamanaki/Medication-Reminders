@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>お薬パートナー｜服薬サポートシステム</title>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Zen Maru Gothic', sans-serif;
+      background-color: #fdfcfb;
+      color: #444;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(135deg, #a0e3af, #63cbb3);
+      color: white;
+      text-align: center;
+      padding: 2.5em 1em;
+      position: relative;
+      overflow: hidden;
+    }
+    header h1 {
+      font-size: 2.8em;
+      margin-bottom: 0.4em;
+    }
+    header p {
+      font-size: 1.2em;
+    }
+    header::after {
+      content: "💊";
+      font-size: 5em;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      opacity: 0.2;
+      animation: float 4s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    main {
+      max-width: 900px;
+      margin: 2em auto;
+      padding: 1em;
+    }
+    section {
+      background: #fff;
+      border-radius: 16px;
+      padding: 2em;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      margin-bottom: 2em;
+      opacity: 0;
+      transform: translateX(50px);
+      transition: all 0.6s ease-out;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    h2 {
+      color: #63cbb3;
+      border-left: 6px solid #63cbb3;
+      padding-left: 12px;
+      font-size: 1.4em;
+    }
+    ul, ol {
+      margin-left: 1.5em;
+    }
+    li {
+      margin-bottom: 0.6em;
+    }
+    .img-box {
+      text-align: center;
+      margin-top: 1em;
+    }
+    .img-box img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .btn-line {
+      display: inline-block;
+      margin-top: 1.5em;
+      padding: 0.9em 1.6em;
+      background-color: #00c300;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: background-color 0.3s ease, transform 0.2s;
+    }
+    .btn-line:hover {
+      background-color: #00a000;
+      transform: scale(1.05);
+    }
+    footer {
+      text-align: center;
+      font-size: 0.85em;
+      padding: 2em 1em;
+      color: #888;
+      background-color: #f3f3f3;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>お薬パートナー</h1>
+    <p>LINEでかんたん！かわいくしっかり服薬サポート 🧸</p>
+  </header>
+  <main>
+    <section class="slide-in">
+      <h2>🧠 お薬パートナーとは？</h2>
+      <p>
+        「お薬パートナー」は、LINEを使って薬の飲み忘れを防ぐサポートシステムです。
+        登録が完了すると、設定された時間にLINEで服薬通知が届き、「はい」「いいえ」ボタンで服薬確認ができます。
+      </p>
+      <div class="img-box">
+        <img src="image_okusurikun.png" alt="お薬通知イメージ">
+      </div>
+    </section>
+
+    <section class="slide-in">
+      <h2>📋 主な機能</h2>
+      <ol>
+        <li><strong>「服用時間変更」ボタン：</strong> 朝食・昼食・夕食・就寝の時間帯に変更可能。例：「変更時間帯 08:00」</li>
+        <li><strong>「登録情報確認」ボタン：</strong> 現在の薬の服用時間や内容をチェック！</li>
+        <li><strong>「登録情報削除」ボタン：</strong> 番号を送るだけで簡単削除！</li>
+        <li><strong>「操作説明」ボタン：</strong> 使い方をいつでも確認できます♪</li>
+        <li><strong>薬情報登録機能：</strong> 処方袋の写真を送ると、時間帯を自動で登録！（朝・昼・夜・就寝の文字が必要）</li>
+      </ol>
+    </section>
+
+    <section class="slide-in">
+      <h2>⚙️ その他の便利機能</h2>
+      <ul>
+        <li>時間帯に応じたリマインダーを自動送信</li>
+        <li>服用確認がないときは15分おきに最大5回通知！</li>
+        <li>すべてLINEで完結。アプリのインストール不要♪</li>
+      </ul>
+    </section>
+
+    <!-- 差し替え部分ここから -->
+    <section class="slide-in">
+      <h2>🔗 LINEで始めよう！</h2>
+      <p>下のQRコードを読み取って、「お薬パートナー」と一緒に毎日安心生活をスタート♪</p>
+      <div class="img-box" style="margin-top: 1em;">
+        <img src="使用イメージ.png" alt="使用イメージ" style="max-width: 300px; width: 100%;">
+      </div>
+      <div class="img-box">
+        <a href="https://lin.ee/fuqzdE5">
+          <img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" style="max-width: 240px; width: 100%;">
+        </a>
+      </div>
+      
+    </section>
+    <!-- 差し替え部分ここまで -->
+
+  </main>
+  <footer>
+    &copy; 2025 お薬パートナー Project Team｜毎日をもっとやさしく 🐻
+  </footer>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
