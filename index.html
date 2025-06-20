@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>おくすりパートナー｜服薬サポートシステム</title>
+  <title>お薬パートナー｜服薬サポートシステム</title>
   <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -105,18 +105,42 @@
       color: #888;
       background-color: #f3f3f3;
     }
-  </style>
+  
+.btn-line-big {
+  display: inline-block;
+  background: #00c300;
+  color: white;
+  padding: 1em 2em;
+  font-size: 1.3em;
+  border-radius: 40px;
+  text-decoration: none;
+  margin-top: 1.5em;
+  transition: background 0.3s ease;
+}
+.btn-line-big:hover {
+  background: #00a000;
+}
+
+</style>
 </head>
 <body>
   <header>
-    <h1>おくすりパートナー</h1>
+    <h1>お薬パートナー</h1>
     <p>LINEでかんたん！かわいくしっかり服薬サポート 🧸</p>
   </header>
+<nav style="background:#ffffff; text-align:center; padding:1em 0; position:sticky; top:0; z-index:10; box-shadow:0 2px 5px rgba(0,0,0,0.05);">
+  <a href="#about" style="margin: 0 1em;">お薬パートナーとは</a>
+  <a href="#features" style="margin: 0 1em;">主な機能</a>
+  <a href="#extras" style="margin: 0 1em;">便利機能</a>
+  <a href="#start" style="margin: 0 1em;">LINEで始める</a>
+  <a href="#faq" style="margin: 0 1em;">よくある質問</a>
+</nav>
+
   <main>
     <section class="slide-in">
-      <h2>🧠 おくすりパートナーとは？</h2>
+      <h2>🧠 お薬パートナーとは？</h2>
       <p>
-        「おくすりパートナー」は、LINEを使って薬の飲み忘れを防ぐサポートシステムです。
+        「お薬パートナー」は、LINEを使って薬の飲み忘れを防ぐサポートシステムです。
         登録が完了すると、設定された時間にLINEで服薬通知が届き、「はい」「いいえ」ボタンで服薬確認ができます。
       </p>
       <div class="img-box">
@@ -127,11 +151,11 @@
     <section class="slide-in">
       <h2>📋 主な機能</h2>
       <ol>
-        <li><strong>「服用時間変更」ボタン：</strong> 朝食・昼食・夕食・就寝の時間帯に変更可能。例：「変更時間帯 8:00」</li>
+        <li><strong>「服用時間変更」ボタン：</strong> 朝食・昼食・夕食・就寝の時間帯に変更可能。例：「変更時間帯 08:00」</li>
         <li><strong>「登録情報確認」ボタン：</strong> 現在の薬の服用時間や内容をチェック！</li>
         <li><strong>「登録情報削除」ボタン：</strong> 番号を送るだけで簡単削除！</li>
         <li><strong>「操作説明」ボタン：</strong> 使い方をいつでも確認できます♪</li>
-        <li><strong>薬情報登録機能：</strong> 処方袋の写真を送ると、時間帯を自動で登録！（朝・昼・夜・就寝・毎食の文字が必要）</li>
+        <li><strong>薬情報登録機能：</strong> 処方袋の写真を送ると、時間帯を自動で登録！（朝・昼・夜・就寝の文字が必要）</li>
       </ol>
     </section>
 
@@ -139,6 +163,7 @@
       <h2>⚙️ その他の便利機能</h2>
       <ul>
         <li>時間帯に応じたリマインダーを自動送信</li>
+        <li>服用確認がないときは15分おきに最大5回通知！</li>
         <li>すべてLINEで完結。アプリのインストール不要♪</li>
       </ul>
     </section>
@@ -157,20 +182,31 @@
     <!-- LINEで始めよう（順番変更済） -->
     <section class="slide-in">
       <h2>🔗 LINEで始めよう！</h2>
-      <p>下のボタンをクリックして、「おくすりパートナー」と一緒に毎日安心生活をスタート♪</p>
+      <p>下のボタンをクリックして、「お薬パートナー」と一緒に毎日安心生活をスタート♪</p>
       <div class="img-box" style="margin-top: 1em;">
         <img src="UsingImg.png" alt="使用イメージ" style="max-width: 300px; width: 100%;">
       </div>
-      <div class="img-box">
-        <a href="https://lin.ee/fuqzdE5">
-          <img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" style="max-width: 240px; width: 100%;">
-        </a>
-      </div>
+      
+<div class="img-box">
+  <a href="https://lin.ee/fuqzdE5" class="btn-line-big">LINEで友だち追加</a>
+</div>
+
     </section>
 
-  </main>
+  
+<section class="slide-in" id="faq">
+  <h2>❓ よくある質問</h2>
+  <ul>
+    <li><strong>Q:</strong> 写真を送ると必ず登録できますか？<br><strong>A:</strong> 印刷された薬袋の文字であれば高精度で読み取ります。</li>
+    <li><strong>Q:</strong> 通知は何回届きますか？<br><strong>A:</strong> 最大5回まで15分間隔でリマインドされます。</li>
+    <li><strong>Q:</strong> 手動で薬は登録できますか？<br><strong>A:</strong> はい、「薬登録」と送信し、次に「朝食 花粉の薬」のように入力します。</li>
+    <li><strong>Q:</strong> 薬の追加情報は変更できますか？<br><strong>A:</strong> 「追加情報」と送信すると、備考を上書きできます。</li>
+  </ul>
+</section>
+
+</main>
   <footer>
-    &copy; 2025 おくすりパートナー Project Team｜毎日をもっとやさしく 🐻
+    &copy; 2025 お薬パートナー Project Team｜毎日をもっとやさしく 🐻
   </footer>
   <script>
     const observer = new IntersectionObserver((entries) => {
