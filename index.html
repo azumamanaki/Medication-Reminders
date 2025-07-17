@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -105,44 +106,92 @@
       color: #888;
       background-color: #f3f3f3;
     }
-  
-.btn-line-big {
-  display: inline-block;
-  background: #00c300;
-  color: white;
-  padding: 1em 2em;
-  font-size: 1.3em;
-  border-radius: 40px;
-  text-decoration: none;
-  margin-top: 1.5em;
-  transition: background 0.3s ease;
-}
-.btn-line-big:hover {
-  background: #00a000;
-}
+    .btn-line-big {
+      display: inline-block;
+      background: #00c300;
+      color: white;
+      padding: 1em 2em;
+      font-size: 1.3em;
+      border-radius: 40px;
+      text-decoration: none;
+      margin-top: 1.5em;
+      transition: background 0.3s ease;
+    }
+    .btn-line-big:hover {
+      background: #00a000;
+    }
 
-</style>
+    /* === 追加スタイルここから === */
+    nav a {
+      text-decoration: none;
+      color: #444;
+      font-weight: bold;
+      position: relative;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      width: 0%;
+      height: 2px;
+      background: #63cbb3;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    section:hover {
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      transform: translateY(-4px);
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    .btn-line, .btn-line-big {
+      box-shadow: 0 4px 10px rgba(0, 195, 0, 0.2);
+    }
+    .btn-line:active, .btn-line-big:active {
+      transform: scale(0.97);
+      box-shadow: 0 2px 6px rgba(0, 195, 0, 0.3);
+    }
+    footer {
+      font-family: 'Zen Maru Gothic', sans-serif;
+      letter-spacing: 0.5px;
+    }
+    @media screen and (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+      nav {
+        font-size: 0.95em;
+      }
+      section {
+        padding: 1.5em;
+      }
+    }
+    /* === 追加スタイルここまで === */
+  </style>
 </head>
 <body>
   <header>
     <h1>お薬パートナー</h1>
     <p>LINEでかんたん！かわいくしっかり服薬サポート 🧸</p>
   </header>
-<nav style="background:#ffffff; text-align:center; padding:1em 0; position:sticky; top:0; z-index:10; box-shadow:0 2px 5px rgba(0,0,0,0.05);">
-  <a href="#about" style="margin: 0 1em;">お薬パートナーとは</a>
-  <a href="#features" style="margin: 0 1em;">主な機能</a>
-  <a href="#extras" style="margin: 0 1em;">便利機能</a>
-  <a href="#start" style="margin: 0 1em;">LINEで始める</a>
-  <a href="#faq" style="margin: 0 1em;">よくある質問</a>
-</nav>
+  <nav style="background:#ffffff; text-align:center; padding:1em 0; position:sticky; top:0; z-index:10; box-shadow:0 2px 5px rgba(0,0,0,0.05);">
+    <a href="#about" style="margin: 0 1em;">お薬パートナーとは</a>
+    <a href="#features" style="margin: 0 1em;">主な機能</a>
+    <a href="#extras" style="margin: 0 1em;">便利機能</a>
+    <a href="#start" style="margin: 0 1em;">LINEで始める</a>
+    <a href="#faq" style="margin: 0 1em;">よくある質問</a>
+  </nav>
 
   <main>
     <section class="slide-in" id="about">
       <h2>🧠 お薬パートナーとは？</h2>
-      <p>
-        「お薬パートナー」は、LINEを使って薬の飲み忘れを防ぐサポートシステムです。
-        登録が完了すると、設定された時間にLINEで服薬通知が届き、「服用した」「服用しない」ボタンで服薬確認ができます。
-      </p>
+      <p>「お薬パートナー」は、LINEを使って薬の飲み忘れを防ぐサポートシステムです。
+        登録が完了すると、設定された時間にLINEで服薬通知が届き、「服用した」「服用しない」ボタンで服薬確認ができます。</p>
       <div class="img-box">
         <img src="image_okusurikun.png" alt="お薬通知イメージ">
       </div>
@@ -158,7 +207,6 @@
         <li><strong>「手動登録」ボタン：</strong> メッセージを送信することでも薬の情報を登録可能！</li>
         <li><strong>「詳細情報登録」ボタン：</strong> 薬の名前や処方された時期などを後から追加で登録が可能！</li>
         <li><strong>「操作説明」ボタン：</strong> 使い方をいつでも確認できます♪</li>
-        
       </ol>
     </section>
 
@@ -170,7 +218,6 @@
       </ul>
     </section>
 
-    <!-- システム適応範囲（順番変更済・文章ポップに） -->
     <section class="slide-in">
       <h2>📘 システム適応範囲</h2>
       <ul>
@@ -180,34 +227,41 @@
       </ul>
     </section>
 
-    <!-- LINEで始めよう（順番変更済） -->
     <section class="slide-in" id="start">
       <h2>🔗 LINEで始めよう！</h2>
       <p>下のボタンをクリックして、「お薬パートナー」と一緒に毎日安心生活をスタート♪</p>
       <div class="img-box" style="margin-top: 1em;">
-        <img src="UsingImg.PNG" alt="使用イメージ" style="max-width: 300px; width: 100%;">
+        <img src="UsingImg.png" alt="使用イメージ" style="max-width: 300px; width: 100%;">
       </div>
-      
-<div class="img-box">
-  <a href="https://lin.ee/fuqzdE5" class="btn-line-big">LINEで友だち追加</a>
-</div>
-
+      <div class="img-box">
+        <a href="https://lin.ee/fuqzdE5" class="btn-line-big">LINEで友だち追加</a>
+      </div>
     </section>
 
-  
-<section class="slide-in visible" id="faq">
-  <h2>❓ よくある質問</h2>
-  <ul>
-    <li><strong>Q:</strong> 写真を送ると必ず登録できますか？<br><strong>A:</strong> 印刷された薬袋の文字であれば高精度で読み取ります。</li>
-    <li><strong>Q:</strong> 手動で薬は登録できますか？<br><strong>A:</strong> はい、「薬登録」と送信し、次に「朝食 花粉の薬」のように入力します。</li>
-    <li><strong>Q:</strong> 薬の追加情報は変更できますか？<br><strong>A:</strong> 「追加情報」と送信すると、備考を上書きできます。</li>
-  </ul>
-</section>
+    <section class="slide-in visible" id="faq">
+      <h2>❓ よくある質問</h2>
+      <ul>
+        <li><strong>Q:</strong> 写真を送ると必ず登録できますか？<br><strong>A:</strong> 印刷された薬袋の文字であれば高精度で読み取ります。</li>
+        <li><strong>Q:</strong> 手動で薬は登録できますか？<br><strong>A:</strong> はい、「薬登録」と送信し、次に「朝食 花粉の薬」のように入力します。</li>
+        <li><strong>Q:</strong> 薬の追加情報は変更できますか？<br><strong>A:</strong> 「追加情報」と送信すると、備考を上書きできます。</li>
+      </ul>
+    </section>
 
-</main>
+    <!-- 追加セクション -->
+    <section class="slide-in" style="background: linear-gradient(90deg, #e1f7ec, #f0faf7); text-align: center;">
+      <h2 style="color:#4a9f91;">🌱 使う人の声</h2>
+      <p style="max-width: 600px; margin: 0 auto; font-size: 1.1em;">
+        「薬を飲み忘れがちだったけど、<strong>LINEで通知が来る</strong>から忘れず飲めるようになった！<br>
+        しかも見た目もかわいくて、毎日がちょっと楽しみです ☺️」
+      </p>
+    </section>
+
+  </main>
+
   <footer>
     &copy; 2025 お薬パートナー Project Team｜毎日をもっとやさしく 🐻
   </footer>
+
   <script>
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
